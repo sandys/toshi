@@ -32,7 +32,7 @@
                 </ul>
                 <div class="clearfix tx_hash">
                   <h5>Hash</h5>
-                  <a href="api/v0/transactions/{{hash}}"><span>{{hash}}</span></a>
+                  <a href=<%= url("api/v0/transactions/#{hash}")%>><span>{{hash}}</span></a>
                 </div>
               </div>
             </script>
@@ -58,7 +58,7 @@
                 </ul>
                 <div class="clearfix tx_hash">
                   <h5>Hash</h5>
-                  <a href="api/v0/transactions/<%= tx.hsh %>"><span><%= tx.hsh %></span></a>
+                  <a href=<%= url("api/v0/transactions/#{tx.hsh}")%>><span><%= tx.hsh %></span></a>
                 </div>
               </div>
               <% } %>
@@ -86,7 +86,7 @@
                 </ul>
                 <div class="clearfix block_hash">
                   <h5>Block Hash</h5>
-                  <a href="api/v0/blocks/{{hash}}" target="_blank"><span>{{hash}}</span></a>
+                  <a href=<%= url("api/v0/blocks/#{hash}")%> target="_blank"><span>{{hash}}</span></a>
                 </div>
               </div>
             </script>
@@ -110,7 +110,7 @@
                 </ul>
                 <div class="clearfix block_hash">
                   <h5>Block Hash</h5>
-                  <a href="api/v0/blocks/<%= block.hsh %>" target="_blank"><span><%= block.hsh %></span></a>
+                  <a href=<%= url("api/v0/blocks/#{block.hsh}")%> target="_blank"><span><%= block.hsh %></span></a>
                 </div>
               </div>
               <% } %>
@@ -122,10 +122,10 @@
 
     <div class="col-md-4 col-lg-offset-1">
       <div class="toshi_links">
-        <iframe src="github-btn.html?user=coinbase&repo=toshi&type=watch&count=true"
+        <iframe src=<%= url("github-btn.html?user=coinbase&repo=toshi&type=watch&count=true")%>
         allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
 
-        <iframe src="github-btn.html?user=coinbase&repo=toshi&type=fork&count=true"
+        <iframe src=<%= url("github-btn.html?user=coinbase&repo=toshi&type=fork&count=true")%>
         allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
       </div>
       <div class="section_title clearfix">
